@@ -1,0 +1,51 @@
+.v-enter {
+  opacity:0;
+}
+
+.v-enter-active {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+
+.item {
+  width: 15%;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+.item__image {
+  min-width: 100%;
+  max-width: 100%;
+  height: calc((100vw - 230px) * 0.14);
+}
+
+.item:nth-of-type(6n) {
+  margin-right: 0;
+}
+
+.item:nth-of-type(n + 7) {
+  margin-top: 40px;
+}
+
+.item__name {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.item__artist{
+  margin-top: 5px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+.item__ellipsis {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}

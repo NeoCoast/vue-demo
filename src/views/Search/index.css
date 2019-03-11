@@ -1,0 +1,25 @@
+.search__input {
+  width: 100%;
+  height: 60px;
+  background-color: #282828;
+  border: 0;
+  padding: 0 30px;
+  font-size: 30px;
+  outline: none;
+  caret-color: #1db954;
+  color: white;
+}
+
+.search__res-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+
+.search__title {
+  font-size: 30px;
+  margin: 20px 0 10px 0;
+  color: white;
+}
