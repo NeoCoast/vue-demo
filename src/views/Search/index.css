@@ -1,5 +1,5 @@
 .search__input {
-  width: 100%;
+  width: calc(100% - 60px);
   height: 60px;
   background-color: #282828;
   border: 0;
@@ -15,7 +15,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding: 0 40px;
+  padding: 0 40px 20px;
 }
 
 .search__title {

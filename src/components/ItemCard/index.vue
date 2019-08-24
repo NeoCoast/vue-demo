@@ -24,11 +24,19 @@
 <script type="javascript">
 export default {
   name: 'item-card',
-  props: [
-    'image',
-    'name',
-    'artist'
-  ],
+  props: {
+    image: {
+      type: Object,
+      validator(value) {
+        return !!value.url
+      }
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    artist: String,
+  },
   data() {
     return {
       loaded: false,

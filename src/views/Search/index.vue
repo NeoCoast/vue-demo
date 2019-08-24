@@ -1,12 +1,14 @@
 <template>
   <layout>
-    <input
-      type="text"
-      v-model="searchCriteria"
-      v-on:keydown.enter="search"
-      class="search__input"
-      placeholder="Start typing..."
-    />
+    <keep-alive>
+      <input
+        type="text"
+        v-model="searchCriteria"
+        v-on:keydown.enter="search"
+        class="search__input"
+        placeholder="Start typing..."
+      />
+    </keep-alive>
 
     <div
       v-show="!searched"
@@ -87,11 +89,7 @@ export default {
       this.searchBy({
         q: this.searchCriteria,
         callback: () => {
-          if (this.searchCriteria) {
-            this.searched = true
-          } else {
-            this.searched = false
-          }
+          this.searched = !!this.searchCriteria
         }
       })
     },
