@@ -21,6 +21,31 @@
   </transition>
 </template>
 
-<script type="javascript" src="./index.js"></script>
+<script type="javascript">
+export default {
+  name: 'item-card',
+  props: [
+    'image',
+    'name',
+    'artist'
+  ],
+  data() {
+    return {
+      loaded: false,
+    }
+  },
+  methods: {
+    onLoaded() {
+      this.loaded = true
+    },
+  },
+  computed: {
+    itemStyle() {
+      return `background-image: url(${this.image.url});`
+    }
+  },
+}
+</script>
+
 <style scoped src="./index.css"></style>
 

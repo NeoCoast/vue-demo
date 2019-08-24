@@ -4,5 +4,10 @@
   </div>
 </template>
 
-<script type="javascript" src="./index.js"></script>
+<script type="javascript">
+export default {
+  name: 'layout',
+}
+</script>
+
 <style scoped src="./index.css"></style>
