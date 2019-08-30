@@ -21,6 +21,39 @@
   </transition>
 </template>
 
-<script type="javascript" src="./index.js"></script>
+<script type="javascript">
+export default {
+  name: 'item-card',
+  props: {
+    image: {
+      type: Object,
+      validator(value) {
+        return !!value.url
+      }
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    artist: String,
+  },
+  data() {
+    return {
+      loaded: false,
+    }
+  },
+  methods: {
+    onLoaded() {
+      this.loaded = true
+    },
+  },
+  computed: {
+    itemStyle() {
+      return `background-image: url(${this.image.url});`
+    }
+  },
+}
+</script>
+
 <style scoped src="./index.css"></style>
 
